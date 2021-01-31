@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/zsh
+#usar zsh shell para que funcione
 clear
 num=1
 core2(){
