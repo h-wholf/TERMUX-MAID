@@ -20,7 +20,7 @@ core2(){
   let num=$num+1
   else
   setterm --foreground white
-  echo SON TODOS LOS ARCHIVOS SALIENDO😎
+  echo SON TODOS LOS ARCHIVOS SALIENDO 😎
   sleep 2;
   exit
   fi
