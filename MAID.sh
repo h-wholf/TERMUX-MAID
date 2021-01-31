@@ -6,14 +6,20 @@ core2(){
   if [ $num -le $archivo ];
   then
   a=$(ls -c|awk NR==$num)
-  
+  c=$(setterm --foreground cyan)
+  cb=$(setterm --foreground white)
+  r=$(setterm --foreground yellow)
+  setterm --foreground white
+  echo 'ARCHIVO NUMERO '$r$num$cb '| '$c'o'$cb 'ABRIR | '$c'x '$cb'SALIR | '$c'b '$cb'BORRAR'
+  setterm --foreground green
   echo $a
   
   
   
   let num=$num+1
   else
-  echo son todos los archivos
+  setterm --foreground white
+  echo SON TODOS LOS ARCHIVOS SALIENDO😎
   sleep 2;
   exit
   fi
