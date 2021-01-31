@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/zsh
 clear
 num=1
 core2(){
