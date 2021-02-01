@@ -13,7 +13,8 @@ core2(){
   setterm --foreground white
   echo 'ARCHIVO NUMERO '$r$num$cb '| '$c'o'$cb 'ABRIR | '$c'x '$cb'SALIR | '$c'b '$cb'BORRAR'
   setterm --foreground green
-  echo $a
+  t=$(du -sh $a|awk '{print $1}')
+  echo $a $cb' TAMAÑO: '$r$t
   
   
   
@@ -38,6 +39,11 @@ core2(){
   if [ "$b" = b ];
   then 
       rm $a
+  fi
+  if [ "$b" = c ];
+  then
+  cd $a
+  num=1
   fi
   core2
   
