@@ -10,11 +10,21 @@ core2(){
   c=$(setterm --foreground cyan)
   cb=$(setterm --foreground white)
   r=$(setterm --foreground yellow)
+  
+
+  if [ -d "$a" ]
+  then
+   setterm --foreground yellow
+   carpeta="Es Un Directorio"
+   echo $carpeta
+   i=$(echo $a)
+  fi
+  
   setterm --foreground white
   echo 'ARCHIVO NUMERO '$r$num$cb '| '$c'o'$cb 'ABRIR | '$c'x '$cb'SALIR | '$c'b '$cb'BORRAR'
   setterm --foreground green
   t=$(du -sh $a|awk '{print $1}')
-  echo $a $cb' TAMAÑO: '$r$t
+  echo $a $cb' TAMAÑO: '$r$t 
   
   
   
@@ -45,10 +55,16 @@ core2(){
   cd $a
   num=1
   fi
+  if [ "$b" = a ];
+  then
+  cd ..
+  num=1
+  fi
   core2
   
   
 }
 
 core2
+
 
