@@ -124,6 +124,12 @@ i(){
   
 }
 
+s(){
+ 
+
+	termux-open --send $archivo
+}
+
 #INICIALIZAR ENGINE
 colores
 init
